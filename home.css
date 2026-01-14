@@ -450,12 +450,14 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     gap: 3rem;
+    align-items: center;
+    justify-content: center
 }
 
 .services-container .services-box {
     background-color: var(--second-bg-color);
     padding: 2rem 1.5rem;
-    width: 100%;
+    width: 80%;
     border-radius: .6rem;
     transition: .5s
 }
