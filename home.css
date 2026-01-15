@@ -511,7 +511,7 @@ nav a:hover {
     }
 
     header {
-        padding: 1.3rem 1.3rem;
+        padding: 1.5rem 1rem;
     }
 
     nav {
@@ -549,30 +549,31 @@ nav a:hover {
     }
 
     .home {
+       min-height: 60vh;
         flex-direction: column-reverse;
-        padding: 1.3rem 1.3rem;
+        padding: 1.5rem 1.5rem;
     }
 
     .home-content h1 {
-        padding: 1.3rem 1.3rem;
+        
         font-size: 2rem;
 
     }
 
     .home-content h3 {
-        padding: 0 1.3rem;
+        
         font-size: 1rem;
 
     }
 
     .home-content p {
-        padding: 0 1.3rem;
+       line-height: 1rem;
         font-size: 0.8rem;
         width: 100%;
     }
 
     .sci {
-        padding: 1.3rem 1.3rem;
+       
     }
 
     .sci button {
@@ -588,8 +589,8 @@ nav a:hover {
 
     .home-image .image-box {
         position: relative;
-        height: 40vh;
-        width: 40vh;
+        height: 37vh;
+        width: 37vh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -598,7 +599,7 @@ nav a:hover {
         overflow: hidden;
     }
 .services {
-    padding: 1rem 2rem;
+    padding: 1.5rem 1.5rem;
 }
 
 .services h2 {
@@ -614,9 +615,10 @@ nav a:hover {
 .services-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+   
 }
 
 .services-container .services-box {
@@ -642,7 +644,7 @@ nav a:hover {
 
 }
 .resume{
-    padding: 1rem 1rem;
+    padding: 1.5rem 1.5rem;
     
     
  }
@@ -651,12 +653,12 @@ nav a:hover {
 
 }
 .resume-cont-left h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 .resume-cont-left p{
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+    font-size: 0.7rem;
+    line-height: 1rem;
     font-family: 'second';
     margin-bottom: 1rem;
 }
@@ -704,4 +706,12 @@ nav a:hover {
   padding-top: 2rem;
   overflow: hidden;
 }
+.resume-cont-right .resume-item h3 {
+   font-size: 1.5rem;
+}
+.resume-cont-right .resume-item h3 span {
+   font-size: 1.5rem;
+   color: var(--main-color);
+}
+
 }
