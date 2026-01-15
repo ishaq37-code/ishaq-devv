@@ -34,11 +34,6 @@ body {
 }
 
 
-.main {
-    height: 100vh;
-    width: 100%;
-    position: relative;
-}
 
 header {
     width: 100%;
@@ -88,6 +83,7 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 5rem;
+    min-height: 100vh;
 }
 
 .home-content h1 {
@@ -111,7 +107,7 @@ nav a:hover {
     text-transform: capitalize;
     display: inline-block;
     color: transparent;
-    -webkit-text-stroke: .08rem var(--main-color);
+    -webkit-text-stroke: .07rem var(--main-color);
     animation: displaytext 11s linear infinite;
     animation-delay: calc(-4s * var(--i));
 }
@@ -263,6 +259,7 @@ nav a:hover {
 
 .services {
     padding: 2rem 5rem;
+     min-height: 90vh;
 }
 
 .services h2 {
@@ -335,29 +332,40 @@ nav a:hover {
 }
  .resume{
     padding: 2rem 5rem;
+    display: flex;
+    flex-wrap: wrap;
+     min-height: 90vh;
+
  }
+ .resume-item{
+    display: none;
+ }
+ .resume-item.active{
+    display: block;
+}
 .resume-cont-left{
-    width: 50%;
+    width: 40%;
 
 }
 .resume-cont-left h2{
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 .resume-cont-left p{
-    font-size: 0.9rem;
-    line-height: 1.5rem;
+    font-size: 0.8rem;
+    line-height: 1.2rem;
     font-family: 'second';
     margin-bottom: 1rem;
+    padding-right:1rem;
 }
-.resume-cont-left .btn{
+.resume-cont-left .button-sec{
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
     width: 80%;
 }
-.resume-cont-left .btn button{
+.resume-cont-left .button-sec button{
     padding: 1rem 7rem;
     text-align: center;
     background-color: var(--second-bg-color);
@@ -369,17 +377,129 @@ nav a:hover {
     font-family: 'second';
     cursor:pointer;
 }
-.resume-cont-left .btn button.active{
+.resume-cont-left .button-sec button.active{
     border-color: var(--main-color);
      border: .1rem solid;
     color: var(--main-color);
 }
 .resume-cont-right{
-    width: 50%;
+    width: 60%;
+}
+.resume-cont-right .resume-item h3 {
+   font-size: 2.3rem;
+}
+.resume-cont-right .resume-item h3 span {
+   font-size: 2.3rem;
+   color: var(--main-color);
 }
 
 
 
+.resume-cont-right .resume-item p{
+    font-size: 0.7rem;
+    line-height: 1rem;
+    font-family: 'second';
+    margin-bottom: 1rem;
+    padding-right:1rem;
+}
+.resume-cont-right .resume-item .des{
+    line-height: 1rem;
+}
+.resume-box{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(3,auto);
+  
+  overflow: auto;
+   gap: 2rem;
+   height: 25rem;
+}
+.resume-box::-webkit-scrollbar{
+    width: .7rem;
+}
+.resume-box::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 1rem;
+}
+.resume-box:hover::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+.resume-box .resume-list{
+    background-color: var(--second-bg-color);
+     padding: 0.9rem;
+    border-radius: .6rem;
+}
+.resume-box .resume-list h2{
+    font-size: 1.2rem;
+     letter-spacing: 0.03rem;
+}   
+.resume-box .resume-list .year{
+    color: var(--main-color);
+}
+
+.resume-item.skill .resume-box{
+  display: grid;
+  grid-template-columns: repeat(3,2fr);
+  gap: 3rem;
+  
+  padding-top: 2rem;
+}
+.resume-item.skill .resume-list{
+    padding: 0.5rem 0.5rem;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    
+    
+}
+.resume-item.skill .resume-list i{
+   font-size: 4.5rem;
+  
+    
+}
+.resume-item.skill .resume-list:hover i{
+    color: var(--main-color);
+}
+.resume-item.skill .resume-list .name {
+    color: var(--bg-color);
+    position: absolute;
+    top: -20%;
+    background-color: var(--white-color);
+    font-size: 0.8rem;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(.9);
+    transition: .2s;
+}
+.resume-item.skill .resume-list:hover .name {
+    transform: scale(1);
+    top: -25%;
+    opacity: 1;
+}
+.resume-item.abt .resume-box{
+    display: grid;
+    grid-template-columns: (2,1fr);
+    gap: 0.5rem;
+}
+.resume-item.abt .resume-list{
+ background-color: var(--bg-color);
+  
+}
+.resume-item.abt .resume-list .abts{
+    font-size: 0.9rem;
+    font-family: 'second';
+
+}
+.resume-item.abt .resume-list .abts span{
+ font-size: 0.9rem;
+    font-family: 'second';
+    color: var(--main-color);
+}
 @media (max-width:600px) {
     .logo h2 {
         font-size: 7vw;
@@ -522,6 +642,8 @@ nav a:hover {
 }
 .resume{
     padding: 1rem 1rem;
+    
+    
  }
 .resume-cont-left{
     width: 100%;
@@ -537,14 +659,14 @@ nav a:hover {
     font-family: 'second';
     margin-bottom: 1rem;
 }
-.resume-cont-left .btn{
+.resume-cont-left .button-sec{
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: stretch;
     width: 100%;
 }
-.resume-cont-left .btn button{
+.resume-cont-left .button-sec button{
     padding: 1rem 7rem;
     text-align: center;
     background-color: var(--second-bg-color);
@@ -556,13 +678,29 @@ nav a:hover {
     font-family: 'second';
     cursor:pointer;
 }
-.resume-cont-left .btn button.active{
+.resume-cont-left .button-sec button.active{
     border-color: var(--main-color);
      border: .1rem solid;
     color: var(--main-color);
 }
 .resume-cont-right{
-    width: 50%;
+    width: 100%;
 }
-
+.resume-box{
+  display: grid;
+  grid-template-columns: 1fr;
+ 
+  
+  overflow: auto;
+   gap: 2rem;
+   height: 25rem;
+}
+.resume-item.skill .resume-box{
+  display: grid;
+  grid-template-columns: repeat(2,2fr);
+  gap: 3rem;
+  padding: 1rem 1rem;
+  padding-top: 2rem;
+  overflow: hidden;
+}
 }
