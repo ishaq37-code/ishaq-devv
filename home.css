@@ -41,6 +41,9 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 5rem;
+    position: fixed;
+    z-index: 100;
+    background-color: var(--bg-color);
 
 }
 
