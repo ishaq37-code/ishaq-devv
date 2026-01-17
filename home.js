@@ -132,4 +132,58 @@ form.addEventListener("submit",(e)=>{
       status.innerText = "❌ Submission failed. Try again!";
       console.error(err);
     });
-  })
+  });
+  
+const timeLine= gsap.timeline()
+
+
+timeLine.from(".home-content h1",{
+  y:50,
+  duration:1,
+  opacity:0,
+  delay:1
+})
+.from("header",{
+   opacity:0,
+   duration:1,
+   y:-50,
+ 
+})
+.from(".home-content h3", {
+  opacity:0,
+  duration:1,
+  y:50,
+ 
+  
+})
+.from(".home-content p", {
+  opacity:0,
+  duration:0.7,
+  
+ 
+  
+})
+.from(".home-content .sci", {
+  opacity:0,
+  duration:0.7,
+  y:60
+ 
+  
+})
+
+.from(".home-image", {
+  opacity:0,
+  duration:0.7,
+  scale:0.8
+ 
+  
+})
+
+
+.from(".services h2", {
+  opacity:0,
+  duration:0.7,
+  y:50
+ 
+  
+})

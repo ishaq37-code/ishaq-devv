@@ -40,7 +40,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 5rem;
+    padding: 1rem 5rem;
     position: fixed;
     z-index: 100;
     background-color: var(--bg-color);
@@ -86,7 +86,7 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 5rem;
-    min-height: 90vh;
+    min-height: 80vh;
 }
 
 .home-content h1 {
@@ -294,7 +294,7 @@ nav a:hover {
     transition: .5s
 }
 .services-container .services-box:hover{
-    transform: scale(1.02);
+    
     border: .2rem solid var(--main-color);
 }
 .services-box .icon-box {
