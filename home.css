@@ -86,7 +86,7 @@ nav a:hover {
     align-items: center;
     justify-content: space-between;
     padding: 2rem 5rem;
-    min-height: 100vh;
+    min-height: 90vh;
 }
 
 .home-content h1 {
