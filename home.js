@@ -16,7 +16,7 @@ reumeBtn.forEach((btn, idx) => {
 });
 document.addEventListener('DOMContentLoaded', () => {
 
-  // Select elements
+
   const num = document.querySelector('.project-num');
   const tittle = document.querySelector('.project-tittle');
   const des = document.querySelector('.project-des');
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const nextbtn = document.querySelector('.right-arrow');
   const preBtn = document.querySelector('.left-arrow');
 
-  // Projects array
+ 
   const projects = [
     {
       num:"01",
@@ -60,18 +60,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let currentIndex = 0;
 
-  // Load project data
 function loadData(index){
   const project = projects[index];
 
-  // Fade out
+
   num.classList.add('fade-out');
   tittle.classList.add('fade-out');
   des.classList.add('fade-out');
   tech.classList.add('fade-out');
   img.classList.add('fade-out');
 
-  // Wait for transition to complete
   setTimeout(() => {
     num.textContent = project.num;
     tittle.textContent = project.tittle;
@@ -81,24 +79,24 @@ function loadData(index){
     link.href = project.link;
     github.href = project.github;
 
-    // Fade in
+   
     num.classList.remove('fade-out');
     tittle.classList.remove('fade-out');
     des.classList.remove('fade-out');
     tech.classList.remove('fade-out');
     img.classList.remove('fade-out');
 
-    // Disable buttons
+    
     preBtn.disabled = index === 0;
     nextbtn.disabled = index === projects.length - 1;
-  }, 300); // match CSS transition duration
+  }, 300); 
 }
 
 
-  // Initial load
+ 
   loadData(currentIndex);
 
-  // Button events
+  
   nextbtn.addEventListener('click', () => {
     if(currentIndex < projects.length - 1){
       currentIndex++;
@@ -115,3 +113,23 @@ function loadData(index){
 
 });
 
+const form= document.getElementById("ContactForm");
+const status= document.getElementById("status")
+
+form.addEventListener("submit",(e)=>{
+   e.preventDefault();
+
+   fetch("https://script.google.com/macros/s/AKfycbzixQ56OrqTMuibJHdRNTt9nH0VFVSRX2TQc9L96aAOTY2oBox1uajB-64RKSq3R2NFHQ/exec",{
+    method:"POST",
+    body: new FormData(form)
+   })
+    .then(res => res.text())
+    .then(data => {
+      status.innerText = "✅ Form submitted successfully!";
+      form.reset();
+    })
+     .catch(err => {
+      status.innerText = "❌ Submission failed. Try again!";
+      console.error(err);
+    });
+  })

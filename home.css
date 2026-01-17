@@ -933,8 +933,10 @@ border: .1rem solid var(--main-color);
     padding: 0.5rem 0.5rem;
     background-color: var(--white-color);
     border-radius: 50%;
-    transform: rotate(225deg);
+   
     transition: .5s;
+    align-items: center;
+    justify-content: center;
 
 }
 .resume{
