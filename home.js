@@ -125,11 +125,11 @@ form.addEventListener("submit",(e)=>{
    })
     .then(res => res.text())
     .then(data => {
-      status.innerText = "✅ Form submitted successfully!";
+      status.innerText = "Form submitted successfully!";
       form.reset();
     })
      .catch(err => {
-      status.innerText = "❌ Submission failed. Try again!";
+      status.innerText = " Submission failed. Try again!";
       console.error(err);
     });
   });
