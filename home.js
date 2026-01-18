@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const tittle = document.querySelector('.project-tittle');
   const des = document.querySelector('.project-des');
   const tech = document.querySelector('.project-tech');
-  const img = document.querySelector('.project-image-cont img');
+  const img = document.querySelector('.project-image-cont .image-slider .image-slide img');
   const link = document.querySelector(".live-link");
   const github = document.querySelector(".github");
   const nextbtn = document.querySelector('.right-arrow');
@@ -143,12 +143,7 @@ timeLine.from(".home-content h1",{
   opacity:0,
   delay:1
 })
-.from("header",{
-   opacity:0,
-   duration:1,
-   y:-50,
- 
-})
+
 .from(".home-content h3", {
   opacity:0,
   duration:1,
@@ -158,32 +153,198 @@ timeLine.from(".home-content h1",{
 })
 .from(".home-content p", {
   opacity:0,
-  duration:0.7,
+  duration:1,
   
  
   
 })
 .from(".home-content .sci", {
   opacity:0,
-  duration:0.7,
+  duration:1,
   y:60
  
   
 })
+.from(".home-content .sci .icon ", {
+  opacity:0,
+  duration:1,
+  y:60,
+ stagger:1
+  
+})
+
 
 .from(".home-image", {
   opacity:0,
-  duration:0.7,
+  duration:1,
   scale:0.8
  
   
 })
 
-
-.from(".services h2", {
-  opacity:0,
-  duration:0.7,
-  y:50
+gsap.from(".services h2",{
+   opacity:0,
+   duration:1,
+   y:50,
+  scrollTrigger:{
+     trigger:".services h2",
+     body:"body",
+     
+     start:"top 50%",
+     end:"top 80%"
+  }
+})
+gsap.from(".services-container",{
+   opacity:0,
+   duration:2,
+   y:60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".services-container",
+     start:"top 70%",
+     once:true,
+     
+     
+  }
+})
+gsap.from(".resume-cont-left h2",{
+   opacity:0,
+   duration:2,
+   y:60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".resume-cont-left",
+     start:"top 70%",
+     once:true,
+    
+     
+  }
+})
+gsap.from(".resume-cont-left p",{
+   opacity:0,
+   duration:2,
+   y:10,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".resume-cont-left p",
+     start:"top 70%",
+     once:true,
+     
+     
+  }
+})
+gsap.from(".resume-cont-left .button-sec button",{
+   opacity:0,
+   duration:2,
+   x:-60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".resume-cont-left .button-sec",
+     start:"top 70%",
+     once:true,
+     
+     
+  }
+})
+gsap.from(".resume-cont-right",{
+   opacity:0,
+   duration:2,
+   y:60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".resume-cont-right",
+     start:"top 70%",
+     once:true,
+     
+     
+  }
+})
+gsap.from(".project h1",{
+   opacity:0,
+   duration:2,
+   y:60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".project ",
+     start:"top 70%",
+     once:true,
+    
+     
+  }
+})
+gsap.from(".project .project-con ",{
+   opacity:0,
+   duration:2,
+   y:60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".project .project-con",
+     start:"top 70%",
+     once:true,
  
-  
+     
+  }
+})
+gsap.from(".contact-info h2",{
+   opacity:0,
+   duration:2,
+   y:60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".contact-info ",
+     start:"top 70%",
+     once:true,
+    
+     
+  }
+})
+gsap.from(".contact-info .contact-detils",{
+   opacity:0,
+   duration:2,
+   y:60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".contact-info .contact-detils",
+     start:"top 70%",
+     once:true,
+    
+     
+  }
+})
+gsap.from(".contact-form h2",{
+   opacity:0,
+   duration:2,
+   y:60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".contact-info ",
+     start:"top 70%",
+     once:true,
+    
+     
+  }
+})
+gsap.from(".contact-form form",{
+   opacity:0,
+   duration:2,
+   y:60,
+   stagger:0.6,
+   ease:"power2.out",
+  scrollTrigger:{
+     trigger:".contact-info ",
+     start:"top 70%",
+     once:true,
+    
+     
+  }
 })
