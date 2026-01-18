@@ -143,6 +143,12 @@ timeLine.from(".home-content h1",{
   opacity:0,
   delay:1
 })
+timeLine.from("header",{
+  y:-50,
+  duration:1,
+  opacity:0,
+  delay:1
+})
 
 .from(".home-content h3", {
   opacity:0,
